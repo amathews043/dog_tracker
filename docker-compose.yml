@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+    dev:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+            target: dev
+        tty: true
+        stdin_open: true
+        ports:
+            - 8000:8000
+        volumes:
+            - .:/code
+            - poetry:/home/docker/.cache
+
+volumes:
+    poetry:

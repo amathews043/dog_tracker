@@ -4,7 +4,10 @@
     "service": "dev",
     "customizations": {
         "vscode": {
-            "extensions": ["ms-python.python", "ms-python.vscode-pylance"]
+            "extensions": ["ms-python.python", 
+            "ms-python.vscode-pylance", 
+            "batisteo.vscode-django",
+        ]
         }
     },
     "remoteUser": "docker",

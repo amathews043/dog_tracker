@@ -9,6 +9,7 @@ packages = [{include = "dog_tracker"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^4.2.2"
+django-allauth = "^0.54.0"
 
 
 [build-system]

@@ -17,6 +17,14 @@ def create_household(request):
         if form.is_valid(): 
             household = form.save()
             household.owners.add(request.user)
-            return redirect('home_page')
+            return redirect('detail_household', id=household.id)
         else: 
             return render(request, "dog_tracker/create_household.html", {'form':form})
+
+def detail_household(request,id):
+    household = Household.objects.get(id=id)
+    return render(request, "dog_tracker/detail_household.html", {"household": household})
+
+def list_household(request): 
+    households = Household.objects.all()
+    return render(request, "dog_tracker/list_household.html", {"households": households})

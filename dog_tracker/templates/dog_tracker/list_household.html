@@ -1,0 +1,7 @@
+{%extends 'dog_tracker/base.html'%}
+
+{%block content %}
+    {%for household in households%}
+    <a href="{% url "detail_household" id=household.id%}"> {{household.name}} </a>
+    {%endfor%}
+{%endblock content%}
